@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["manage.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+# Pairing a list with its own tail is common here, and those zips differ in length on purpose.
+ignore = ["B905"]
